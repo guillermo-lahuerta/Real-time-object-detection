@@ -3,4 +3,5 @@ Data
 .idea
 Guille_personal.pem
 connect_AWS
-
+.ipynb_checkpoints
+.DS_Store
