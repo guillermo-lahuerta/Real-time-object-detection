@@ -1,4 +1,4 @@
-# Object detection
+# Real time object detection
 
 ## About this notebook
 
@@ -28,8 +28,8 @@ The digits have been pre-processed to be size-normalized and centred in a fixed-
 
 Clone this repository and navigate to the main folder. To do so, open your Terminal (for MacOS/Linux) or your Command Prompt (for Windows) and run the following commands:
 ```
-git clone https://github.com/guillermo-lahuerta/Object_detection.git
-cd ./Object_detection/
+git clone https://github.com/guillermo-lahuerta/Real_time_object_detection.git
+cd ./Real_time_object_detection/
 ```
 
 I strongly suggest to create a virtual environment with Conda to manage dependencies and isolate projects. After installing [Miniconda](https://docs.conda.io/en/latest/miniconda.html), run the following commands to update the base conda packages:
