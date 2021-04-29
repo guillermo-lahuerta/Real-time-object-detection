@@ -1,12 +1,6 @@
-scikit-learn==0.23.2
-matplotlib==3.3.2
 jupyter==1.0.0
 numpy==1.19.2
 keras==2.4.3
 pandas==1.1.5
-dash==1.18.1
-colorlover==0.3.0
-dash-auth==1.4.1
-dash-canvas==0.1.0
-scikit-image==0.18.1
+opencv-python==4.5.1.48
 
