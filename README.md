@@ -49,6 +49,7 @@ Now, create a Jupyter Notebook kernel for the new environment:
 ```
 conda install ipykernel jupyter
 conda install -c conda-forge jupyter_nbextensions_configurator
+conda install -c conda-forge jupyter_contrib_nbextensions
 python -m ipykernel install --user --name object_detection --display-name "object_detection"
 ```
 
