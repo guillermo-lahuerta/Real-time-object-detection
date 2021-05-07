@@ -8,7 +8,7 @@ The model presented in this repository has been totally implemented using open s
 
 I got idea to design this model after watching one of the YouTube videos by [Nicholas Renotte](https://www.youtube.com/watch?v=yqkISICHH-U). Some of the steps followed in this project, resemble what he has done for other use cases (e.g., sign object detection). I also used an amazing graphical image annotation package, *LabelImg*, developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
 
-Regarding the technical implementation of the model, we use *transfer learning* to load the neuron weights pre-trained on the [XXXX]() model.
+Regarding the technical implementation of the model, we use *transfer learning* to load the neuron weights pre-trained on the [**ResNet50**](https://keras.io/api/applications/resnet/) model.
 
 ## ResNet50
 
