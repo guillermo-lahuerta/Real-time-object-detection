@@ -16,15 +16,17 @@ Convolutional Neural Networks is the standard architecture for solving tasks ass
 
 For this project, we use LeNet-5, which has been successfully used on the MNIST dataset to identify handwritten-digit patterns. The LeNet-5 architecture is presented in the following schema.
 
-## DataFrame
+![screenshot](img/lenet.png)
+
+## Data
 
 The dataset used in this model, has been manually taken and labeled. To speed the processes, the repository includes a Python script that automatically takes pictures from your webcam every X seconds.
 
 ![](img/images.png)
 
-## Labelling Data
+## Label the data
 
-To annotate the images (i.e., assign the annotation box and the corresponding Mask vs No-mask class), we used the [LabelImg](https://github.com/tzutalin/labelImg).
+To annotate the images (i.e., assign the bounding box and the corresponding *Mask* vs *No-mask* class), we used the [LabelImg](https://github.com/tzutalin/labelImg) library.
 
 ![](img/screenshot_labelling.gif)
 
