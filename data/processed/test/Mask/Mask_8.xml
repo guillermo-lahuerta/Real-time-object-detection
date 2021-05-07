@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Mask</folder>
+	<filename>Mask_8.jpg</filename>
+	<path>/Users/guillermolahuerta/OneDrive/3_Data_Science/6_GitHub/Real_time_object_detection/data/raw/Mask/Mask_8.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Mask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>832</xmin>
+			<ymin>437</ymin>
+			<xmax>1125</xmax>
+			<ymax>857</ymax>
+		</bndbox>
+	</object>
+</annotation>
