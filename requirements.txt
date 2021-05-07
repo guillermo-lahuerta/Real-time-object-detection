@@ -5,3 +5,4 @@ pandas==1.1.5
 opencv-python==4.5.1.48
 PyQt5==5.15.4
 lxml==4.6.3
+object-detection==0.0.3

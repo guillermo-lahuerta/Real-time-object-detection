@@ -6,3 +6,5 @@ connect_AWS
 .ipynb_checkpoints
 .DS_Store
 labelImg
+models
+ssd_resnet50_v1_fpn_640x640_coco17_tpu-8
