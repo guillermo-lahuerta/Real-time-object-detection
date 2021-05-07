@@ -6,5 +6,4 @@ connect_AWS
 labelImg
 models
 ssd_resnet50_v1_fpn_640x640_coco17_tpu-8
-generate_tfrecord.py
 label_map.pbtxt

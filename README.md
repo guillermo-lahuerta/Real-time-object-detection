@@ -2,21 +2,31 @@
 
 ## About this notebook
 
-This notebook contains a simple implementation of a Deep Learning model for **object detection**.
+This notebook contains a simple implementation of a Deep Learning model for **real time object detection**. In this particular case, the object to be detected is a **mask**.
 
-The model presented in this repository has been totally implemented using open source tools (i.e., Python and TensorFlow).
+The model presented in this repository has been totally implemented using open source tools (i.e., Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card with CUDA architectures (so we can take advantage of *tensorflow-gpu* to speed up the training).
 
-## LeNet-5
+I got idea to design this model after watching one of the YouTube videos by [Nicholas Renotte](https://www.youtube.com/watch?v=yqkISICHH-U). Some of the steps followed in this project, resemble what he has done for other use cases (e.g., sign object detection). I also used an amazing graphical image annotation package, *LabelImg*, developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
+
+Regarding the technical implementation of the model, we use *transfer learning* to load the neuron weights pre-trained on the [XXXX]() model.
+
+## ResNet50
 
 Convolutional Neural Networks is the standard architecture for solving tasks associated with images (e.g., image classification). Some of the well-known deep learning architectures for CNN are LeNet-5 (7 layers), GoogLeNet (22 layers), AlexNet (8 layers), VGG (16–19 layers), and ResNet (152 layers).
 
 For this project, we use LeNet-5, which has been successfully used on the MNIST dataset to identify handwritten-digit patterns. The LeNet-5 architecture is presented in the following schema.
 
-## Data
+## DataFrame
 
-The dataset used in this model, corresponds to the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset.
-It is composed by a training set of 60,000 examples, and a test set of 10,000 examples.
-The digits have been pre-processed to be size-normalized and centred in a fixed-size image of 28x28 pixels.
+The dataset used in this model, has been manually taken and labeled. To speed the processes, the repository includes a Python script that automatically takes pictures from your webcam every X seconds.
+
+![](img/images.png)
+
+## Labelling Data
+
+To annotate the images (i.e., assign the annotation box and the corresponding Mask vs No-mask class), we used the [LabelImg](https://github.com/tzutalin/labelImg).
+
+![](img/screenshot_labelling.gif)
 
 
 ## Requirements
@@ -24,7 +34,7 @@ The digits have been pre-processed to be size-normalized and centred in a fixed-
 * Python 3
 * Tensorflow 2
 
-## How to run this app
+## How to run the Notebook
 
 Clone this repository and navigate to the main folder. To do so, open your Terminal (for MacOS/Linux) or your Command Prompt (for Windows) and run the following commands:
 ```
@@ -66,19 +76,17 @@ It's time to install *TensorFlow*:
 pip install <whl_url>
 ```
 
-* If you don't have a NVIDIA graphics card, you should install the regular *TensorFlow* with the following command:
-```
-pip install tensorflow==2.4.0
-```
+* If you don't have a NVIDIA graphics card, you should use *Google Colab* or any other environment that allows GPU computing.
 
 ### Run the notebook
 To run the app jupyter notebook, use these commands:
 ```
 conda activate object_detection
-python ./app/app.py
+jupyter notebook
 ```
 
 ## Resources
 
 * [TensorFlow](https://www.tensorflow.org/)
-* [MNIST](http://yann.lecun.com/exdb/mnist/)
+* [LabelImg](https://github.com/tzutalin/labelImg)
+* [TFODCourse](https://github.com/nicknochnack/TFODCourse)
