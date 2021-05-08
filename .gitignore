@@ -4,5 +4,5 @@
 labelImg
 pre_trained_model
 Tensorflow
-label_map.pbtxt
+annotations
 model_main_tf2.py
