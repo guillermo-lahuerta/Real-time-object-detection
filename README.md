@@ -87,6 +87,11 @@ conda activate object_detection
 jupyter notebook
 ```
 
+If you try to open the notebook in a Windows environment and the Kernel fails, try running the following comand before opening the Notebook:
+```
+conda install pywin32
+```
+
 ## Resources
 
 * [TensorFlow](https://www.tensorflow.org/)
