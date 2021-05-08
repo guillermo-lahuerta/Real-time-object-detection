@@ -80,7 +80,7 @@ pip install <whl_url>
 
 * If you don't have a NVIDIA graphics card, you should use *Google Colab* or any other environment that allows GPU computing.
 
-In order to monitor the training of the model, I also suggest to take advantage of *TensorBoard*, TensorFlow's visualization toolkit. With this tool, we can see the the performance of the model epoch after epoch (something extremely useful for Deep Learning models that need hours to be trained).
+In order to monitor the training of the model, I also suggest to take advantage of '**TensorBoard**' (i.e., TensorFlow's visualization toolkit). With this tool, we can see the evolution of the *loss function* epoch after epoch (something extremely useful for Deep Learning models that need hours to be trained).
 
 ![](img/tensorboard.png)
 
