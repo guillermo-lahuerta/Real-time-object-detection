@@ -1,8 +1,0 @@
-item { 
-	name:'Mask'
-	id:1
-}
-item { 
-	name:'No-mask'
-	id:2
-}
