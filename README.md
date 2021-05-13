@@ -4,7 +4,7 @@
 
 This notebook contains all the steps to train a Deep Learning model for **Real Time Object Detection**. In this particular project, the object to be detected is a **mask**.
 
-The model presented in this repository has been totally implemented using *open source* tools (such as Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card and CUDA architectures (so we can take advantage of *tensorflow-gpu* to speed up the training). If you don't have such an environment, I suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) instead.
+The model presented in this repository has been totally implemented using *open source* tools (such as Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card and CUDA architectures (so we can take advantage of **tensorflow-gpu** to speed up the training). If you don't have such an environment, I suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) instead.
 
 ![](img/mask_recognition.gif)
 
