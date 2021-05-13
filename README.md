@@ -1,40 +1,71 @@
-# Real time object detection
+# Real Time Object Detection
 
 ## About this notebook
 
-This notebook contains a simple implementation of a Deep Learning model for **real time object detection**. In this particular case, the object to be detected is a **mask**.
+This notebook contains all the steps to train a Deep Learning model for **Real Time Object Detection**. In this particular project, the object to be detected is a **mask**.
 
-The model presented in this repository has been totally implemented using open source tools (i.e., Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card with CUDA architectures (so we can take advantage of *tensorflow-gpu* to speed up the training).
+The model presented in this repository has been totally implemented using *open source* tools (such as Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card and CUDA architectures (so we can take advantage of *tensorflow-gpu* to speed up the training). If you don't have such an environment, I suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) instead.
 
-I got idea to design this model after watching one of the YouTube videos by [Nicholas Renotte](https://www.youtube.com/watch?v=yqkISICHH-U). Some of the steps followed in this project, resemble what he has done for other use cases (e.g., sign object detection). I also used an amazing graphical image annotation package, *LabelImg*, developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
+![](img/mask_recognition.gif)
 
-Regarding the technical implementation of the model, we use *transfer learning* to load the neuron weights pre-trained on the [**ResNet50**](https://keras.io/api/applications/resnet/) model.
+The steps described in this project, follow the structure described in this popular TensorFlow [tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html). I adapted the proposed structure to be able to detect a mask (instead of more common state-of-the-art objects, such as cats, dogs or people).
 
-## ResNet50
+I also used an amazing graphical image annotation package, *LabelImg*, to perform the labelling of the pictures myself. This package is developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
 
-Convolutional Neural Networks is the standard architecture for solving tasks associated with images (e.g., image classification). Some of the well-known deep learning architectures for CNN are LeNet-5 (7 layers), GoogLeNet (22 layers), AlexNet (8 layers), VGG (16–19 layers), and ResNet (152 layers).
+Regarding the technical implementation of the model, I used *transfer learning* to take advantage of a pre-trained Convolutional Neural Network. For the purposes of this model, I obtained great results with the [**MobileNet**](https://arxiv.org/abs/1704.04861) architecture.
 
-For this project, we use LeNet-5, which has been successfully used on the MNIST dataset to identify handwritten-digit patterns. The LeNet-5 architecture is presented in the following schema.
 
-![screenshot](img/lenet.png)
+## MobileNet
+
+Convolutional Neural Networks is the standard architecture for solving tasks associated with images. Some of the well-known deep learning architectures for CNN are LeNet-5 (7 layers), GoogLeNet (22 layers), AlexNet (8 layers), VGG (16–19 layers), or ResNet (152 layers).
+
+In this [repository](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md), you can find a huge amount of pre-trained models with different architectures.
+
+For this project, I tested two models:
+
+- The *SSD ResNet50 V1 FPN 640x640*.
+- The *SSD MobilNet V2 FPN 640x640*.
+
+I finally used the latter, simply because the former was too heavy to run on my system.
+
 
 ## Data
 
-The dataset used in this model, has been manually taken and labeled. To speed the processes, the repository includes a Python script that automatically takes pictures from your webcam every X seconds.
+The dataset used in this model, has been manually taken and labeled. To speed the processes, the repository includes a Python script that automatically takes pictures from your webcam every 2 seconds.
 
 ![](img/images.png)
 
-## Label the data
 
-To annotate the images (i.e., assign the bounding box and the corresponding *Mask* vs *No-mask* class), we used the [LabelImg](https://github.com/tzutalin/labelImg) library.
+## Data labelling
+
+To annotate the images (i.e., to assign the bounding box and the corresponding *Mask* vs *No-mask* class), I used the [LabelImg](https://github.com/tzutalin/labelImg) library.
 
 ![](img/screenshot_labelling.gif)
 
 
-## Requirements
+## Hyper-parameter tuning
+
+Normally, *hyper-parameter tuning* is used to define the best configuration of the model that results in a better prediction (i.e., a model that *generalises* better). However, for this project, the hyper-parameter consisted on selecting the configuration that allows the model to run on my computer without crashing.
+
+For instance, the batch size has been set to 8, just because 16 was impossible to fit in memory. For the same reason, 5000 epochs were selected (more resulted in a crush of the system).
+
+
+## Evaluation of the models
+
+In order to monitor the training of the model and also the evaluation, I suggest to take advantage of '**TensorBoard**' (i.e., TensorFlow's visualization toolkit).
+
+- While training, this tool allows us to see the evolution of the *loss function* epoch after epoch (something extremely useful for Deep Learning models that need hours to be trained).
+
+- After training, TensorBoard allow us to check the evaluation *metrics*, and also the prediction for the test set.
+
+![](img/tensorboard.gif)
+
+
+## Requirements to run the model
 
 * Python 3
 * Tensorflow 2
+
 
 ## How to run the Notebook
 
@@ -80,9 +111,6 @@ pip install <whl_url>
 
 * If you don't have a NVIDIA graphics card, you should use *Google Colab* or any other environment that allows GPU computing.
 
-In order to monitor the training of the model, I also suggest to take advantage of '**TensorBoard**' (i.e., TensorFlow's visualization toolkit). With this tool, we can see the evolution of the *loss function* epoch after epoch (something extremely useful for Deep Learning models that need hours to be trained).
-
-![](img/tensorboard.png)
 
 ### Run the notebook
 To run the app jupyter notebook, use these commands:
@@ -100,4 +128,4 @@ conda install pywin32
 
 * [TensorFlow](https://www.tensorflow.org/)
 * [LabelImg](https://github.com/tzutalin/labelImg)
-* [TFODCourse](https://github.com/nicknochnack/TFODCourse)
+* [Tensorflow tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html)
