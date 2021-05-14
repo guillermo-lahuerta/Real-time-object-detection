@@ -2,26 +2,24 @@
 
 ## About this notebook
 
-This notebook contains all the steps to train a Deep Learning model for **Real Time Object Detection**. In this particular project, the object to be detected is a **mask**.
+This [notebook](https://github.com/guillermo-lahuerta/Real_time_object_detection/blob/main/Mask_detection.ipynb) contains all the steps to train a Deep Learning model for **Real Time Object Detection**. In this particular project, the object to be detected is a **mask**.
 
-The model presented in this repository has been totally implemented using *open source* tools (such as Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card and CUDA architectures (so we can take advantage of **tensorflow-gpu** to speed up the training). If you don't have such an environment, I suggest using [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb) instead.
+The model presented in this repository has been totally implemented using *open source* tools (such as Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card and CUDA architectures (so we can take advantage of **tensorflow-gpu** to speed up the training). If you don't have such an environment, I suggest using Google Colab instead.
 
 ![](img/mask_recognition.gif)
 
-The steps described in this project, follow the structure described in this popular TensorFlow [tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html). I adapted the proposed structure to be able to detect a mask (instead of more common state-of-the-art objects, such as cats, dogs or people).
+The steps described in this project, follow the structure described in this popular TensorFlow [tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html). I adapted the proposed structure to be able to detect a **mask** (instead of more common state-of-the-art objects, such as cats, dogs or people).
 
 I also used an amazing graphical image annotation package, *LabelImg*, to perform the labelling of the pictures myself. This package is developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
 
-Regarding the technical implementation of the model, I used *transfer learning* to take advantage of a pre-trained Convolutional Neural Network. For the purposes of this model, I obtained great results with the [**MobileNet**](https://arxiv.org/abs/1704.04861) architecture.
+Regarding the technical implementation of the model, I used *transfer learning* to take advantage of a pre-trained Convolutional Neural Network. For the purposes of this model, I obtained great results with the [MobileNet V2](https://arxiv.org/abs/1704.04861) architecture.
 
 
-## MobileNet
+## MobileNet v2
 
 Convolutional Neural Networks is the standard architecture for solving tasks associated with images. Some of the well-known deep learning architectures for CNN are LeNet-5 (7 layers), GoogLeNet (22 layers), AlexNet (8 layers), VGG (16–19 layers), or ResNet (152 layers).
 
-In this [repository](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md), you can find a huge amount of pre-trained models with different architectures.
-
-For this project, I tested two models:
+In this [repository](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md), you can find a huge amount of pre-trained models with different architectures. For this specific project, I just tested the following two models:
 
 - The *SSD ResNet50 V1 FPN 640x640*.
 - The *SSD MobilNet V2 FPN 640x640*.
@@ -50,11 +48,11 @@ For instance, the batch size has been set to 8, just because 16 was impossible t
 
 ## Evaluation of the models
 
-In order to monitor the training of the model and also the evaluation, I suggest to take advantage of '**TensorBoard**' (i.e., TensorFlow's visualization toolkit).
+In order to monitor the training of the model and also the evaluation, I suggest to take advantage of **TensorBoard** (i.e., TensorFlow's visualization toolkit).
 
-- While training, this tool allows us to see the evolution of the *loss function* epoch after epoch (something extremely useful for Deep Learning models that need hours to be trained).
+- While training, this tool allows us to see the evolution of the **loss function** epoch after epoch (something extremely useful for Deep Learning models that need hours to be trained).
 
-- After training, TensorBoard allow us to check the evaluation *metrics*, and also the prediction for the test set.
+- After training, TensorBoard allow us to evaluate the **metrics**, and also to check the prediction for the test set.
 
 ![](img/tensorboard.gif)
 
