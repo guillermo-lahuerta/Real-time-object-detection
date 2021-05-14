@@ -26,8 +26,6 @@ For this project, I tested two models:
 - The *SSD ResNet50 V1 FPN 640x640*.
 - The *SSD MobilNet V2 FPN 640x640*.
 
-I finally used the latter, simply because the former was too heavy to run on my system.
-
 
 ## Data
 
@@ -45,7 +43,7 @@ To annotate the images (i.e., to assign the bounding box and the corresponding *
 
 ## Hyper-parameter tuning
 
-Normally, *hyper-parameter tuning* is used to define the best configuration of the model that results in a better prediction (i.e., a model that *generalises* better). However, for this project, the hyper-parameter consisted on selecting the configuration that allows the model to run on my computer without crashing.
+*Hyper-parameter tuning* is used to define the best configuration of the model that results in a better prediction (i.e., a model that *generalises* better). However, for this project, the hyper-parameter tuning consisted on selecting the configuration that allows the model to run on my computer without crashing.
 
 For instance, the batch size has been set to 8, just because 16 was impossible to fit in memory. For the same reason, 5000 epochs were selected (more resulted in a crush of the system).
 
