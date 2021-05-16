@@ -4,6 +4,5 @@
 labelImg
 pre_trained_model
 Tensorflow
-annotations
 model_main_tf2.py
 exporter_main_v2
