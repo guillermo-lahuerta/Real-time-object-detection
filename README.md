@@ -10,7 +10,7 @@ The model presented in this repository has been totally implemented using *open 
 
 The steps described in this project, follow the structure described in this popular TensorFlow [tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html). I adapted the proposed structure to be able to detect a **mask** (instead of more common state-of-the-art objects, such as cats, dogs or people).
 
-Actually, I had the idea to create this repository after watching [one](https://www.youtube.com/watch?v=yqkISICHH-U) of Nicholas Renotte's Youtube videos, where he teaches how to build a model to detect *signs*. I strongly suggest to check his videos (he is a Data Scientist at IBM).
+Actually, I had the idea to create this repository after watching [one](https://www.youtube.com/watch?v=yqkISICHH-U) of Nicholas Renotte's Youtube videos, where he teaches how to build a model to detect *signs*. I strongly suggest to check his videos.
 
 I also used an amazing graphical image annotation package, *LabelImg*, to perform the labelling of the pictures myself. This package is developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
 
