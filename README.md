@@ -10,6 +10,8 @@ The model presented in this repository has been totally implemented using *open 
 
 The steps described in this project, follow the structure described in this popular TensorFlow [tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html). I adapted the proposed structure to be able to detect a **mask** (instead of more common state-of-the-art objects, such as cats, dogs or people).
 
+Actually, I had the idea to create this repository after watching [one](https://www.youtube.com/watch?v=yqkISICHH-U) of Nicholas Renotte's Youtube videos, where he teaches how to build a model to detect *signs*. I strongly suggest to check his videos (he is a Data Scientist at IBM).
+
 I also used an amazing graphical image annotation package, *LabelImg*, to perform the labelling of the pictures myself. This package is developed by [Tzuta Lin](https://github.com/tzutalin/labelImg).
 
 Regarding the technical implementation of the model, I used *transfer learning* to take advantage of a pre-trained Convolutional Neural Network. For the purposes of this model, I obtained great results with the [MobileNet V2](https://arxiv.org/abs/1704.04861) architecture.
@@ -43,7 +45,7 @@ To annotate the images (i.e., to assign the bounding box and the corresponding *
 
 *Hyper-parameter tuning* is used to define the best configuration of the model that results in a better prediction (i.e., a model that *generalises* better). However, for this project, the hyper-parameter tuning consisted on selecting the configuration that allows the model to run on my computer without crashing.
 
-For instance, the batch size has been set to 8, just because 16 was impossible to fit in memory. For the same reason, 5000 epochs were selected (more resulted in a crush of the system).
+For instance, the batch size has been set to 8, just because 16 was impossible to fit in memory. For the same reason, 5000 epochs were selected (more resulted in a crash of the system).
 
 
 ## Evaluation of the models
