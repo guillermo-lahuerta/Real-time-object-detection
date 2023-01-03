@@ -6,7 +6,7 @@ This [notebook](https://github.com/guillermo-lahuerta/Real_time_object_detection
 
 The model presented in this repository has been totally implemented using *open source* tools (such as Python 3 and TensorFlow 2), and is designed to be run on an a system with a NVIDIA graphics card and CUDA architectures (so we can take advantage of **tensorflow-gpu** to speed up the training). If you don't have such an environment, I suggest using Google Colab instead.
 
-![](img/mask_recognition.gif)
+![](img/mask_recognition_short.gif)
 
 The steps described in this project, follow the structure described in this popular TensorFlow [tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html). I adapted the proposed structure to be able to detect a **mask** (instead of more common state-of-the-art objects, such as cats, dogs or people).
 
